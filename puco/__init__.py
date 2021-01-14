@@ -1,1 +1,1 @@
-from .puco import PusherConsumer
+from .connection import PusherConsumer
