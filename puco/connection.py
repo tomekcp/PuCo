@@ -65,6 +65,9 @@ class PusherConsumer(object):
     def connect(self):
         self.__connection.ioloop.start()
 
+    def disconnect(self):
+        self.__connection.ioloop.stop()
+
     # Connection Callbacks
     def __on_connection_open(self, connection):
         self.__connection.channel(on_open_callback=self.__on_publish_channel_open)
